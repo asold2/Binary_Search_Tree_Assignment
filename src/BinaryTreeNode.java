@@ -3,6 +3,11 @@ public class BinaryTreeNode<E> {
     private BinaryTreeNode leftChild;
     private BinaryTreeNode rightChild;
 
+    public BinaryTreeNode(E element) {
+        this.element = element;
+        leftChild = null;
+        rightChild = null;
+    }
 
     public void setElement(E element){
         this.element = element;
