@@ -37,6 +37,11 @@ class BinarySearchTreeTest {
         root.getRightChild().getRightChild().addLeftChild(new BinarySearchTreeNode(18));
         root.getRightChild().getRightChild().addRightChild(new BinarySearchTreeNode(23));
 
+        tree.removeElement(7);
+        tree.removeElement(19);
+        tree.removeElement(23);
+        tree.removeElement(10);
+        System.out.println(tree.inOrder());
         assertTrue(tree.removeElement(7));
     }
 

@@ -40,7 +40,7 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree{
      }
 
 
-    public boolean removeElement(E element) {
+    public boolean removeElement(E element) { // not really working
         BinarySearchTreeNode parent= null;
         BinarySearchTreeNode child = root;
 
@@ -54,6 +54,7 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree{
                 child = (BinarySearchTreeNode) child.getRightChild();
             }
             else{
+                child = null;
                 break;
             }
         }
@@ -81,6 +82,7 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree{
                 rightMost = (BinarySearchTreeNode) rightMost.getRightChild();
             }
             child.setElement(rightMost.getElement());
+//            child.setElement(null);
 
             if(parentOfRightMost.getRightChild() == rightMost)
                 parentOfRightMost.addRightChild(rightMost.getLeftChild());
@@ -120,11 +122,22 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree{
         return max;
     }
 
-    public void rebalance(){
+    public void rebalance(){ // not sure if working
+//        BinarySearchTree temp = new BinarySearchTree();
+//        E arr[] = (E[]) this.inOrder().toArray();
+//        E first = arr[0];
+//        E last = arr[arr.length-1];
+//        if(first.compareTo(last)<0){
+//            int middle = ((int)first + (int)last)/2;
+//            temp.insert(middle);
+//            rebalance();
+//            rebalance();
+        }
+
 
     }
 
 
-}
+
 
 
